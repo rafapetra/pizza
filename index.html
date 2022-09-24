@@ -9,7 +9,7 @@
   <body class="body">
 
     <div class="header">
-      <div class ="logo">ll</div>
+      <div class ="logo"><img src="img/pizza.png" class="img"></div>
       <div class ="header2">
         <div class ="header-logo">LUIGI'S<BR>PIZZA</div>
         <div class ="header-menu">BUILD YOUR PIZZA | CONTACT | ADDRESS |</div></div>
@@ -18,30 +18,35 @@
     <div class="container">
       <div class="content">
         <div class="prices">
-          PRICES:
-          <br><br><i>(pizza includes tomato sauce and cheese)</i><br><br>
-        Small: $10<br>
-        Medium: $15<br>
-        Large: $20<br><br>
+          <b><span class="menu">PRICES:</span></b>
+          <br><br><i>(includes tomato sauce and cheese)</i><br><br>
+          <span class="menu">
+        Small:<span class="right">$10</span><br>
+        Medium:<span class="right">$15</span><br>
+        Large:<span class="right">$20</span><br><br></span>
     
-        Each topping adds $2
+        Each topping:<span class="right">+$2</span><br><br>
         </div>
-        <div class="builder">      <form id="newOrder">
-          Select a size:
+        <div class="builder">
+          <div class="child">
+            <div class="size">
+          <form id="newOrder">
+          Select a size:<br>
           <label>
             <input type="radio" name="size" value="small" id="small" checked />
             Small
-          </label>
+          </label><br>
           <label>
             <input type="radio" name="size" value="medium" id="medium" />
             Medium
-          </label>
+          </label><br>
           <label>
             <input type="radio" name="size" value="large" id="large" />
             Large
-          </label>
-          <br />
-          Select your toppings:
+          </label><br>
+        </div>
+        <div class="toppings">
+          Select your toppings:<br>
           <label>
             <input
               type="checkbox"
@@ -50,11 +55,11 @@
               id="peppeorni"
             />
             Pepperoni
-          </label>
+          </label><br>
           <label>
             <input type="checkbox" name="toppings" value="olives" id="olives" />
             Olives
-          </label>
+          </label><br>
           <label>
             <input
               type="checkbox"
@@ -63,11 +68,11 @@
               id="pineapple"
             />
             Pineapple
-          </label>
+          </label><br>
           <label>
             <input type="checkbox" name="toppings" value="sausage" id="sausage" />
             Sausage
-          </label>
+          </label><br>
           <label>
             <input
               type="checkbox"
@@ -76,10 +81,12 @@
               d="mushrooms"
             />
             Mushrooms
-          </label>
-          <button type="submit">Submit Selection</button>
+          </label><br>
+          <br><br><button type="submit">Submit Selection</button>
         </form>
-       <br><div id="result"></div>
+        </div>
+      </div>
+       <div id="result"></div>
          </div>
       </div>
 

@@ -11,28 +11,27 @@ Code: let pizza = new Pizza();
       pizza.toppings;
 Expected Output: Toppings {first: 'pineapple', second: undefined, third: undefined}
 
+Describe: Toppings()
+Test: It should return a Toppings object with three properties for toppings"
+Code: const toppings = new Toppings('pineapple', 'anchovies', 'olives);
+Expected Output: Toppings {first: 'pineapple', second: 'anchovies', third: 'olives'}
 
+Describe: Toppings.combineToppings
+Code: let pizza = new Pizza();
+      let newOrder = new Toppings("pineapple");
+      pizza.addToppings(newOrder);
+      pizza.toppings;
+Expected Output: Toppings {first: 'pineapple', second: undefined, third: undefined}
 
+Describe: Pizza.addSize
+Code: let pizza = new Pizza();
+      let NewOrderSize = "user input for size"
+      pizza.addSize(NewOrderSize)
+      pizza;
+Expected Output: Pizza {toppings: undefined size: 'user input for size'}
 
-//
-// Business Logic for Pizza ---
-function Pizza(pizzaToppings, pizzaSize) {
-  this.toppings = pizzaToppings;
-  this.size = pizzaSize;
-}
+Describe: Pizza.addPrice
+Test: It should return $10
+Code: newOrder(small, pepperoni);
+Expected Output: Pizza {toppings: pepperoni size: small, price: 10}
 
-Pizza.prototype.addToppings = function(topping) {
-  this.toppings = topping;
-}
-
-
-// Business Logic for Toppings -- 
-function Toppings(firstTopping, secondTopping, thirdTopping) {
-  this.first = firstTopping;
-  this.second = firstTopping;
-  this.third = firstTopping;
-}
-
-Toppings.prototype.allToppings = function() {
-  return this.first + this.second + this.third;
-};
