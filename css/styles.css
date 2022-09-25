@@ -161,3 +161,12 @@ width: 170px;
 .bold {
   font-weight: bold;
 }
+.copyright {
+  width: 580px;
+  margin: auto;
+  margin-top: 15px;
+  height: 19px;
+  padding: 10px;
+  background-color: #517133;
+  color: #E7DECD;
+}
