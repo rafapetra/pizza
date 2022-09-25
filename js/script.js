@@ -49,7 +49,10 @@ function handleFormSubmission(event) {
   newOrder.addToppings(selectedToppings);
   newOrder.addSize(inputtedSize);
   newOrder.addPrice();
-  document.querySelector("div#result").innerText = "Your total is: $" + newOrder.price;
+  document.querySelector("div#result").style.display = "block";
+
+  document.querySelector("span#result").innerText = "$"+newOrder.price;
+  
 }
 
 window.addEventListener("load", function () {
