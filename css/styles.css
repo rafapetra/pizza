@@ -91,7 +91,7 @@ flex-direction: column;
 .content {
   display: flex;
   flex-direction: column wrap;
-  height: 210px;
+  height: 240px;
 }
 
 .builder {
