@@ -1,13 +1,8 @@
 // Business Logic for Pizza ---
-function Pizza() {}
-
-Pizza.prototype.addToppings = function (topping) {
-  this.toppings = [topping];
-};
-
-Pizza.prototype.addSize = function (size) {
-  this.size = size;
-};
+function Pizza(pizzaSize, pizzaToppings) {
+  this.toppings = [pizzaToppings];
+  this.size = pizzaSize;
+}
 
 Pizza.prototype.addPrice = function (price) {
   this.price = 0;
@@ -20,9 +15,7 @@ Pizza.prototype.addPrice = function (price) {
   };
 
   this.toppings.forEach(function(element, i, array){
-    console.log(element, this.price);
   });
-
 }; 
 
 // User Interface Logic -----
@@ -46,8 +39,8 @@ function handleFormSubmission(event) {
     selectedToppings.push(checkboxes[i].value);
   }
 
-  newOrder.addToppings(selectedToppings);
-  newOrder.addSize(inputtedSize);
+  newOrder.toppings = selectedToppings;
+  newOrder.size = inputtedSize;
   newOrder.addPrice();
   document.querySelector("div#result").style.display = "block";
 
